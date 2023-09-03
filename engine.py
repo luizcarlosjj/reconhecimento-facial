@@ -145,6 +145,7 @@ if(desconhecido[0]):
     rostos_conhecidos, nomes_dos_rostos = get_rostos()
     resultados = fr.compare_faces(rostos_conhecidos, rosto_desconhecido)
     if resultados == [True]:
+        print("="*28)
         console.print(f"{os.linesep}-> Usuário Identificado!", style="green bold")
     elif resultados == [False]:
         console.print(f"{os.linesep}-> Usuário Não Corresponde ao Cadastrado!", style="red bold", )

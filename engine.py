@@ -7,9 +7,9 @@ console = Console()
 
 ## SISTEMA DE CADASTRO 
 print("="*28)
-console.print(f'[on blue]  Seja Bem vindo ao DevCad  [/]{os.linesep}', style="bold")
+console.print(f'Seja Bem vindo ao DevCad{os.linesep}', style="bold green")
 name_cad = input(f'Digite Seu nome: ')
-print(f'[on red]  Ok, Agora abra o programa na barra de tarefas  [/]')
+console.print('Ok, Agora abra o programa na barra de tarefas', style="bold red")
 
 video_capture = cv2.VideoCapture(0)
 faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -33,8 +33,18 @@ while True:
 
     cv2.putText(
         frame,
-        'Cadastre Sua Facial:',
+        'Pressione Enter Para capturar seu rosto',
         (150,20),
+        font, 0.6,
+        (0,0,0),
+        2,
+        cv2.LINE_4
+    )
+
+    cv2.putText(
+        frame,
+        '- ESC para sair -',
+        (250,450),
         font, 0.6,
         (0,0,0),
         2,
@@ -57,9 +67,9 @@ cv2.destroyAllWindows()
 ## SISTEMA DE LOGIN:
 print(f'{os.linesep}')
 print("="*28)
-console.print(f'[on green]  Seja Bem vindo ao DevLogin  [/]{os.linesep}', style="bold")
-name_log = input(f'Digite Seu nome: ')
-print(f'[on red]  Ok, Agora abra o programa na barra de tarefas  [/]')
+console.print(f'Seja Bem vindo ao DevLogin{os.linesep}', style="bold green")
+name_log = input(f'Digite Seu nome Cadastrado: ')
+console.print('Ok, Agora abra o programa na barra de tarefas' , style="bold red")
 
 video_capture = cv2.VideoCapture(0)
 faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -79,8 +89,18 @@ while True:
 
     cv2.putText(
         frame,
-        'Verificação de Identidade',
-        (150,20),
+        'Reconhecimento Facial, pressione Enter para capturar seu rosto.',
+        (10,20),
+        font, 0.5,
+        (0,0,0),
+        2,
+        cv2.LINE_4
+    )
+
+    cv2.putText(
+        frame,
+        '- ESC para sair -',
+        (250,450),
         font, 0.6,
         (0,0,0),
         2,

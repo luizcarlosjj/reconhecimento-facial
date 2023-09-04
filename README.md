@@ -1,4 +1,4 @@
-# Reconhecimento Facial em Python
+# 🧑‍⚕️ Reconhecimento Facial em Python
 Sistema de Reconhecimento Facial em Python com Captura e identificação atravez da webcam.
 
 ## 🛠️ Construído com
